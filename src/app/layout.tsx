@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GestanteProvider } from "@/context/GestanteContext";
 import AppShell from "@/components/AppShell";
+import LgpdModal from "@/components/LgpdModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GestanteProvider>
+          <LgpdModal />
           <AppShell>
             {children}
           </AppShell>
