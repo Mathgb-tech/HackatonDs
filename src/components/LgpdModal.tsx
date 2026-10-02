@@ -10,7 +10,7 @@ export default function LgpdModal() {
 
   useEffect(() => {
     setMounted(true);
-    const hasAccepted = localStorage.getItem('prenatal_lgpd_accepted');
+    const hasAccepted = sessionStorage.getItem('prenatal_lgpd_accepted');
     if (!hasAccepted) {
       setIsOpen(true);
     }
@@ -18,7 +18,7 @@ export default function LgpdModal() {
 
   const handleAccept = () => {
     if (!accepted) return;
-    localStorage.setItem('prenatal_lgpd_accepted', 'true');
+    sessionStorage.setItem('prenatal_lgpd_accepted', 'true');
     setIsOpen(false);
   };
 
